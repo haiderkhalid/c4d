@@ -1,0 +1,419 @@
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    height: 100%;
+    line-height: 1.4rem;
+    background-color: #f4f4f4;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.arrow {
+    position: absolute;
+    fill: #fff;
+    top: 50%;
+    transition: transform 0.3s;
+    z-index: 10;
+}
+
+.arrow.left {
+    transform: rotate(-180deg) scale(0.6);
+    left: 10px;
+}
+
+.arrow.right {
+    transform: scale(0.6);
+    left: calc(100% - 80px);
+}
+
+.arrow.left:hover {
+    transform: rotate(-180deg) scale(1);
+    fill: #146ca1;
+}
+
+.arrow.right:hover {
+    transform: scale(1);
+    fill: #146ca1;
+}
+
+.navigation {
+    list-style: none;
+    position: absolute;
+    z-index: 9;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation li {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.navigation li.selected:before {
+    transform: scale(1.9);
+    background: #146ca1;
+}
+
+.navigation li:not(.selected):hover:before {
+    transform: scale(1.4);
+}
+
+.navigation li:before {
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.panel:nth-child(1) {
+    background: url('../img/img1.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+.panel:nth-child(2) {
+    background: url('../img/img2.jpeg') center center no-repeat;
+    background-size: cover;
+}
+
+.panel:nth-child(3) {
+    background: url('../img/img3.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    opacity: 0.3;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 9;
+    top: 20px;
+    right: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1.1rem;
+    font-family: 'El Messiri', sans-serif;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.navbar i {
+    margin-left: 5px;
+}
+
+.navbar a:hover, a.current {
+   color: #146ca1;
+   border-bottom: 3px solid #146ca1;
+}
+
+.primer {
+    color: #146ca1;
+}
+
+.content {
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    z-index: 8;
+}
+
+.content h2 {
+    font-size: 3rem;
+    font-family: 'El Messiri', sans-serif;
+    margin-bottom: 30px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    width: 600px;
+}
+
+.content a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #146ca1;
+    padding: 6px 20px;
+}
+
+.content a:hover {
+    background: #237db6;
+}
+
+
+.section2-content h3{
+    font-size: 2rem;
+}
+
+.section {
+    display: flex;
+    min-height: 600px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.section2 {
+    flex-direction: row-reverse;
+}
+
+.section2-img {
+    flex: 1;
+}
+
+.section2-img img {
+    width: 300px;
+    height: 500px;
+    margin: 60px;  
+}
+
+
+.section2-content {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    margin: auto;
+}
+
+.section2-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.section2-content i {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #146ca1;
+}
+
+.section2-content a:hover {
+    color: #146ca1;
+}
+
+
+.section2-content h3{
+    font-family: 'El Messiri', sans-serif;
+    margin: 0;
+    padding-bottom: 12px;
+    line-height: 2rem;
+    color:#146ca1;
+}
+
+.section2-content p {
+    line-height: 1.6rem;
+    margin-bottom: 60px; 
+}
+
+#sperator {
+    min-height: 400px;
+    overflow: hidden;
+}
+
+#sperator.img1 {
+    background: url('../img/s-img1.jpeg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+.video {
+    flex: 1;
+    margin: auto;
+    padding-right: 80px;
+}
+
+.usage-content {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    margin: auto;
+    text-align: center;
+}
+
+.usage-content h3 {
+    font-family: 'El Messiri', sans-serif;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    color: #146ca1;
+}
+
+.usage-content p {
+    line-height: 1.6rem;
+}
+
+#sperator.img2 {
+    background: url('../img/s-img2.jpeg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+#map_container {
+    padding: 40px 80px;
+}
+
+#about-us {
+    position: relative;
+    min-height: 500px;
+    color: #fff;
+    background: url('../img/about-us.jpeg') center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.section-content {
+    position: absolute;
+    width:100%;
+    text-align: center;
+    color: #fff;
+    z-index: 8;
+    flex: 1;
+}
+
+.section-content p {
+    padding: 0 25%;
+    font-size: 1.2rem;
+}
+
+#about-us h3 {
+    color: f4f4f4;
+    font-size: 3rem;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    top:0;
+    opacity: 0.50;
+    background: #000;
+}
+
+.main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#contact {
+    padding: 50px;
+    box-sizing: border-box;
+    width: 35%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.touch {
+   padding: 50px;
+   box-sizing: border-box;
+   width: 35%;
+   margin: auto;
+   flex: 1;
+}
+
+#contact h1{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 2.5rem;
+    padding: 0 20px;
+}
+
+#contact p {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 5px;
+}
+
+.icons {
+    margin: 30px auto;
+}
+.icons a{
+    font-size: 2.5rem;
+    padding: 0 10px;
+    color: #146ca1;
+}
+
+.touch h1 {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 2.5rem;
+    padding: 0 20px;
+}
+
+.touch input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.touch textarea{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.touch button {
+    width: 100%;
+    padding: 10px 0;
+    border: 0;
+    background: #146ca1;
+    color: #fff;
+}
+
+.touch form {
+    width: 75%;
+    margin: auto;
+}
+
+.footer {
+    background:#146ca1;
+    width: 100%;
+    text-align: center;
+    color: #f4f4f4;
+}
