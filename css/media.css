@@ -1,11 +1,10 @@
-@media(max-width: 700px){
+@media(max-width: 400px){
     .arrows {
         display: none;
     }
 
-    .navigation li {
-        padding-left: 10px;
-        padding-right: 10px;
+    .navigation {
+        display: none;
     }
 
     .navbar {
@@ -73,7 +72,8 @@
     .section2-img img {
         width: 200px;
         height: 300px;
-        margin: 40px;  
+        padding: 40px;
+        margin: auto;  
     }
 
     #sperator.img1 {
@@ -87,6 +87,16 @@
     #sperator {
         display: none;
     }
+
+    iframe {
+        height: 200px;
+        width: 280px;
+    }
+
+    #usage {
+        margin-top: 0;
+    }
+    
 
     .usage-content {
         margin-bottom: 40px;
@@ -133,6 +143,10 @@
         padding: 0 10px;
     }
 
+    .icons {
+        
+    }
+
     .touch h1 {
         font-size: 1.5rem;   
         line-height: 1.4rem;   
@@ -144,5 +158,70 @@
 
     .touch form {
         width: 100%;
+    }
+}
+
+
+@media(max-width: 900px){
+    .content h2 {
+        font-size: 200%;
+    }
+
+    .content p {
+        font-size: 100%;
+    }
+
+    .content a {
+        font-size: 100%;
+    }
+
+    .section2-content h3{
+        font-size: 150%;
+    }
+
+    #sperator {
+        min-height: 300px;
+        overflow: hidden;
+    }
+
+    iframe {
+        height: 250px;
+        width: 400px;
+        resize: both;
+        overflow: auto;
+        margin: auto;
+      }
+
+      .usage-content h3 {
+        font-size: 150%;
+      }
+
+      #map_container {
+        padding: 30px 30px;
+    }
+
+    #about-us {
+        min-height: 400px;
+    }
+
+    .section-content p {
+        font-size: 100%;
+        margin-bottom: 40px;
+    }
+
+    #about-us h3 {
+        font-size: 250%;
+    }
+
+    #contact h1{
+        font-size: 250%;
+    }
+
+    #contact p {
+        font-size: 120%;
+    }
+
+    .touch h1 {
+        font-size: 250%;
     }
 }

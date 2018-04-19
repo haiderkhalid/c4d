@@ -15,14 +15,14 @@ $(document).ready(function() {
       
     });
     
-    $('.right').click(function() {
+    $('.left').click(function() {
       if(currentIndex < 3) {
           currentIndex = currentIndex + 1;
         setPage(currentIndex);
       } 
     });
 
-    $('.left').click(function() {
+    $('.right').click(function() {
       if(currentIndex > 0) {
           currentIndex = currentIndex - 1;
         setPage(currentIndex);

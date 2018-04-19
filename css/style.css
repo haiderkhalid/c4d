@@ -1,3 +1,8 @@
+:root{
+    --blue-text: #4596E2;
+}
+
+
 body {
     margin: 0;
     font-family: 'Cairo', sans-serif;
@@ -34,34 +39,33 @@ body {
 
 .arrow.left:hover {
     transform: rotate(-180deg) scale(1);
-    fill: #146ca1;
+    fill: var(--blue-text);
 }
 
 .arrow.right:hover {
     transform: scale(1);
-    fill: #146ca1;
+    fill: var(--blue-text);
 }
 
 .navigation {
     list-style: none;
     position: absolute;
     z-index: 9;
-    bottom: 30px;
+    bottom: 5%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
 }
 
 .navigation li {
     display: inline-block;
     position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0 20px;
     cursor: pointer;
 }
 
 .navigation li.selected:before {
     transform: scale(1.9);
-    background: #146ca1;
+    background: var(--blue-text);
 }
 
 .navigation li:not(.selected):hover:before {
@@ -135,12 +139,12 @@ body {
 }
 
 .navbar a:hover, a.current {
-   color: #146ca1;
-   border-bottom: 3px solid #146ca1;
+   color: var(--blue-text);
+   border-bottom: 3px solid var(--blue-text);
 }
 
 .primer {
-    color: #146ca1;
+    color: var(--blue-text);
 }
 
 .content {
@@ -151,13 +155,13 @@ body {
 }
 
 .content h2 {
-    font-size: 3rem;
+    font-size: 300%;
     font-family: 'El Messiri', sans-serif;
     margin-bottom: 30px;
 }
 
 .content p {
-    font-size: 1.1rem;
+    font-size: 120%;
     margin-bottom: 40px;
     padding: 0 10px;
     width: 600px;
@@ -165,7 +169,7 @@ body {
 
 .content a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 120%;
     color: #fff;
     background: #146ca1;
     padding: 6px 20px;
@@ -176,16 +180,13 @@ body {
 }
 
 
-.section2-content h3{
-    font-size: 2rem;
-}
-
 .section {
     display: flex;
-    min-height: 600px;
     flex-wrap: wrap;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
     justify-content: space-around;
-
+    min-height: 500px;
 }
 
 .section2 {
@@ -194,18 +195,19 @@ body {
 
 .section2-img {
     flex: 1;
+    display: flex;
 }
 
 .section2-img img {
-    width: 300px;
-    height: 500px;
-    margin: 60px;  
+    width: 250px;
+    height: 400px;
+    margin: auto;  
 }
 
 
 .section2-content {
     flex: 1;
-    width: 100%;
+    width: 50%;
     height: 100%;
     padding: 10%;
     margin: auto;
@@ -216,26 +218,26 @@ body {
     text-decoration: none;
     color: #000;
     margin: 10px 0;
-    font-size: 1rem;
 }
 
 .section2-content i {
-    font-size: 1.2rem;
+    font-size: 120%;
     margin-left: 10px;
-    color: #146ca1;
+    color: var(--blue-text);
 }
 
 .section2-content a:hover {
-    color: #146ca1;
+    color: var(--blue-text);
 }
 
 
 .section2-content h3{
+    font-size: 200%;
     font-family: 'El Messiri', sans-serif;
     margin: 0;
     padding-bottom: 12px;
     line-height: 2rem;
-    color:#146ca1;
+    color:var(--blue-text);
 }
 
 .section2-content p {
@@ -255,9 +257,20 @@ body {
 
 .video {
     flex: 1;
-    margin: auto;
-    padding-right: 80px;
+    display: flex;
 }
+
+#usage {
+    margin-top: 40px;
+}
+
+iframe {
+    height: 300px;
+    width: 500px;
+    resize: both;
+    overflow: auto;
+    margin: auto;
+  }
 
 .usage-content {
     flex: 1;
@@ -271,8 +284,8 @@ body {
 .usage-content h3 {
     font-family: 'El Messiri', sans-serif;
     line-height: 2.5rem;
-    font-size: 1.8rem;
-    color: #146ca1;
+    font-size: 180%;
+    color: var(--blue-text);
 }
 
 .usage-content p {
@@ -286,6 +299,7 @@ body {
 
 #map_container {
     padding: 40px 80px;
+    background-color: #fff;
 }
 
 #about-us {
@@ -310,26 +324,28 @@ body {
 
 .section-content p {
     padding: 0 25%;
-    font-size: 1.2rem;
+    font-size: 120%;
 }
 
 #about-us h3 {
     color: f4f4f4;
-    font-size: 3rem;
+    font-size: 300%;
     font-family: 'El Messiri', sans-serif;
 }
 
-.overlay {
+.overlay-about {
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 6;
     top:0;
     opacity: 0.50;
-    background: #000;
+    background: #0c2370ef;
 }
 
 .main-footer {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -338,32 +354,30 @@ body {
 }
 
 #contact {
-    padding: 50px;
-    box-sizing: border-box;
-    width: 35%;
-    flex: 1;
+    padding: 50px 5%;
+    width: 100%;
+    flex: 1; 
     display: flex;
     flex-direction: column;
 }
 
 .touch {
-   padding: 50px;
-   box-sizing: border-box;
-   width: 35%;
+   padding:50px 5%;
+   width: 100%;
    margin: auto;
    flex: 1;
 }
 
 #contact h1{
     font-family: 'El Messiri', sans-serif;
-    font-size: 3rem;
+    font-size: 300%;
     text-align: center;
     line-height: 2.5rem;
     padding: 0 20px;
 }
 
 #contact p {
-    font-size: 1.3rem;
+    font-size: 130%;
     text-align: center;
     padding: 0 20px;
     margin-bottom: 5px;
@@ -371,16 +385,21 @@ body {
 
 .icons {
     margin: 30px auto;
+
 }
 .icons a{
-    font-size: 2.5rem;
-    padding: 0 10px;
-    color: #146ca1;
+    font-size: 250%;
+    margin: 0 10px;
+    color: var(--blue-text);
+}
+
+.icons a:hover {
+    color: #237db6;
 }
 
 .touch h1 {
     font-family: 'El Messiri', sans-serif;
-    font-size: 3rem;
+    font-size: 300%;
     text-align: center;
     line-height: 2.5rem;
     padding: 0 20px;
@@ -390,20 +409,35 @@ body {
     width: 100%;
     height: 30px;
     margin-bottom: 10px;
+    border: none;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid var(--blue-text);
+    padding: 0 5px;
 }
 
 .touch textarea{
     width: 100%;
     height: 100px;
     margin-bottom: 10px;
+    border: none;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid var(--blue-text);
+    padding: 0 5px;
 }
 
-.touch button {
-    width: 100%;
-    padding: 10px 0;
+.touch input[type=submit] {
+    width: 25%;
     border: 0;
-    background: #146ca1;
+    background: var(--blue-text);
     color: #fff;
+}
+
+.touch input[type=submit]:hover {
+    background-color: #237db6;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--blue-text);
 }
 
 .touch form {
@@ -412,7 +446,7 @@ body {
 }
 
 .footer {
-    background:#146ca1;
+    background:var(--blue-text);
     width: 100%;
     text-align: center;
     color: #f4f4f4;
