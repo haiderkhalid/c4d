@@ -21,15 +21,14 @@
     }
 
     .content p {
-        font-size: .8rem;
-        margin-bottom: 20px;
-        padding: 0 10px;
-        width: 250px;
+        display: none;
     }
     
     .content a {
         font-size: .8rem;
         padding: 5px 10px;
+        position: relative;
+        top: 40px;
     }
 
     .section-content h3{
@@ -42,8 +41,7 @@
     }
     .section-content p {
         padding: 0 10%;
-        font-size: .6rem;
-        line-height: 2;
+        font-size: 1rem;
     }
 
     .section2-content {
@@ -89,8 +87,8 @@
     }
 
     iframe {
-        height: 200px;
-        width: 280px;
+        height: 100%;
+        width: 100%;
     }
 
     #usage {
@@ -118,7 +116,7 @@
     }
 
     #map_container {
-        padding: 40px 10px;
+        padding: 0;
     }
 
     #contact {
@@ -130,12 +128,15 @@
     }
 
     #contact h1{
-        font-size: 1.5rem;
-        line-height: 1.4rem;
+        font-size: 150%;
     }
     
     #contact p {
         font-size: .8rem;
+    }
+
+    #contact a.website {
+        font-size: 100%;
     }
     
     #contact a{
@@ -143,13 +144,8 @@
         padding: 0 10px;
     }
 
-    .icons {
-        
-    }
-
     .touch h1 {
-        font-size: 1.5rem;   
-        line-height: 1.4rem;   
+        font-size: 1.5rem;     
     }
 
     .footer {
@@ -175,8 +171,17 @@
         font-size: 100%;
     }
 
+    .section2-content {
+        padding: 10% 5%;
+    }
+
     .section2-content h3{
         font-size: 150%;
+    }
+
+    .section2-content p {
+        text-align: justify;
+        margin-bottom: 30px;
     }
 
     #sperator {
@@ -190,14 +195,10 @@
         resize: both;
         overflow: auto;
         margin: auto;
-      }
+    }
 
-      .usage-content h3 {
+    .usage-content h3 {
         font-size: 150%;
-      }
-
-      #map_container {
-        padding: 30px 30px;
     }
 
     #about-us {
@@ -205,12 +206,12 @@
     }
 
     .section-content p {
-        font-size: 100%;
         margin-bottom: 40px;
+        font-size: 1rem;
     }
 
     #about-us h3 {
-        font-size: 250%;
+        font-size: 200%;
     }
 
     #contact h1{
